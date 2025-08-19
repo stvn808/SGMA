@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Proyecto</title>
+    <title>Tienda AgroMarket</title>
+    <link rel="stylesheet" href="/frontend/public/css/main.css">
 </head>
 <body>
-    <h1></h1>
-    <h2>Yo soy Stiven</h2>
+
+    <div id="navbar__content"></div>
+    <div id="hero__content"></div>
+
+    <aside id="sidebar__init"></aside>
+    <section id="products__content"></section>
+
+    <div id="footer__content"></div>
+
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+            })
+            .catch(e => console.error("Error loading component:", e));
+        }
+
+        loadHTML("navbar__content", "/frontend/public/views/components/navbar.html");
+        loadHTML("hero__content", "/frontend/public/views/components/hero.html");
+        loadHTML("sidebar__init", "/frontend/public/views/components/sidebar.html");
+        loadHTML("products__content", "/frontend/public/views/components/products.html");
+        loadHTML("footer__content", "/frontend/public/views/components/footer.html");
+    </script>
 </body>
 </html>

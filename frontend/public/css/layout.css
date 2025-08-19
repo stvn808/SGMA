@@ -1,57 +1,211 @@
-/* El archivo layout.css se encarga de definir la estructura base de tu aplicación, como el sistema de grid, flexbox, contenedores, espaciados y alineaciones. Su objetivo es organizar los elementos de la página sin afectar su apariencia visual (colores, tipografías, etc.). */
+/* Layout principal de la página */
 
-/* Distribución general (fondo del body, display, flexbox, grid, alturas, anchos, etc.). */
-
-html {
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
+.top__bar {
+  background: var(--primary-dark);
+  color: var(--text-white);
+  text-align: center;
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
 }
 
-body {
-    background-color: var(--gray-900);
-    color: var(--white);
+/* Layout principal */
+.main__content {
+  display: flex;
+  min-height: 60vh;
 }
 
-/* 1. Contenedor Principal */
+/* Contenedor general */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: var(--bp-wide);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
-/* 2. Sistema de Grid (para distribuir elementos en filas y columnas) */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* 3. Sistema de Flexbox (para alinear elementos en fila o columna) */
+/* Utilidades de flexbox */
 .flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
 }
 
-/* 4. Secciones principales */
-.header, .main, .footer {
-    width: 100%;
-    padding: 20px;
+.flex-col {
+  flex-direction: column;
 }
 
-/* 5. Espaciados reutilizables */
-.margin-top {
-    margin-top: 20px;
+.flex-wrap {
+  flex-wrap: wrap;
 }
-.margin-bottom {
-    margin-bottom: 20px;
+
+.items-center {
+  align-items: center;
 }
-.padding {
-    padding: 20px;
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+/* Utilidades de grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+/* Utilidades de texto */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+/* Utilidades de color */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+/* Utilidades de espaciado */
+.p-sm {
+  padding: var(--spacing-sm);
+}
+
+.p-md {
+  padding: var(--spacing-md);
+}
+
+.p-lg {
+  padding: var(--spacing-lg);
+}
+
+.m-sm {
+  margin: var(--spacing-sm);
+}
+
+.m-md {
+  margin: var(--spacing-md);
+}
+
+.m-lg {
+  margin: var(--spacing-lg);
+}
+
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Utilidades de ancho */
+.w-full {
+  width: 100%;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.max-w-sm {
+  max-width: 400px;
+}
+
+.max-w-md {
+  max-width: 600px;
+}
+
+/* Utilidades de display */
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+/* Efectos y transiciones */
+.transition {
+  transition: var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-hover:hover {
+  box-shadow: var(--shadow-hover);
 }

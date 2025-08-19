@@ -1,0 +1,215 @@
+/* --- Layout general --- */
+.layout {
+  display: flex;          /* dos columnas */
+  align-items: flex-start;
+}
+
+.sidebar__init {
+  flex: 0 0 250px;        /* ancho fijo */
+  background: var(--bg-light);
+  padding: var(--spacing-xl);
+  border-right: 1px solid var(--border-color);
+  height: fit-content;
+  position: sticky;       /* se queda fijo al hacer scroll */
+  top: 0;
+}
+
+.content {
+  flex: 1;                /* ocupa el resto del espacio */
+  padding: 2rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: var(--bg-light);
+}
+
+/* --- Estilos internos del sidebar --- */
+.sidebar h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-200);
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-400);
+  padding-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.sidebar h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--secondary-500);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.sidebar li {
+  margin: var(--spacing-sm) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: rgba(46, 125, 50, 0.05);
+  transform: translateX(2px);
+}
+
+.sidebar input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-300);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.sidebar input[type="checkbox"]:hover {
+  transform: scale(1.1);
+}
+
+.sidebar label {
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--text-color);
+  transition: var(--transition-normal);
+  user-select: none;
+  flex: 1;
+}
+
+.sidebar label:hover {
+  color: var(--primary-400);
+  font-weight: 500;
+}
+
+/* Contador de filtros activos */
+.filter-counter {
+  background: var(--primary-300);
+  color: var(--text-white);
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: auto;
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Botón limpiar filtros */
+.clear-filters {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--secondary-400);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-top: var(--spacing-md);
+  transition: var(--transition-normal);
+}
+
+.clear-filters:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.clear-filters:active {
+  transform: translateY(0);
+}
+
+.clear-filters:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animaciones checkboxes */
+@keyframes checkboxPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.sidebar input[type="checkbox"]:checked {
+  animation: checkboxPop 0.3s ease;
+}
+
+/* Sección de filtros colapsable */
+.filter-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.filter-section.collapsed ul {
+  display: none;
+}
+
+.filter-section h3 {
+  cursor: pointer;
+  position: relative;
+  padding-right: var(--spacing-lg);
+}
+
+.filter-section h3::before {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-sm);
+  transition: var(--transition-normal);
+}
+
+.filter-section.collapsed h3::before {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/* Barra de búsqueda */
+.sidebar-search {
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.sidebar-search input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.sidebar-search input:focus {
+  border-color: var(--primary-500);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+}
+
+.sidebar-search::after {
+  content: '🔍';
+  position: absolute;
+  right: var(--spacing-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  opacity: 0.5;
+}

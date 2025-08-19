@@ -1,0 +1,238 @@
+/* Estilos para el componente Footer */
+
+.footer {
+  background: var(--primary-color);
+  color: var(--text-white);
+  text-align: center;
+  padding: var(--spacing-xl);
+  margin-top: auto;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: var(--transition-slow);
+}
+
+.footer:hover::before {
+  left: 100%;
+}
+
+.footer:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.footer p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* Enlaces del footer */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-normal);
+  border: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.footer-links a:focus {
+  outline: 2px solid var(--text-white);
+  outline-offset: 2px;
+}
+
+/* Información de contacto */
+.contact-info {
+  margin-top: var(--spacing-md);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Redes sociales (si se agregan) */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: var(--font-size-xl);
+  transition: var(--transition-normal);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-sm);
+}
+
+.social-links a:hover {
+  color: var(--text-white);
+  transform: translateY(-2px) scale(1.1);
+}
+
+/* Newsletter (si se agrega) */
+.footer-newsletter {
+  max-width: 400px;
+  margin: var(--spacing-lg) auto;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-newsletter h4 {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-white);
+  font-size: var(--font-size-lg);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: var(--spacing-sm);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+}
+
+.newsletter-form button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--secondary-color);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  font-weight: 500;
+}
+
+.newsletter-form button:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-1px);
+}
+
+/* Separadores visuales */
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: var(--spacing-lg) 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Información legal */
+.legal-info {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Logo en el footer (si se agrega) */
+.footer-logo {
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo img {
+  height: 40px;
+  opacity: 0.8;
+  transition: var(--transition-normal);
+}
+
+.footer-logo img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Información de horarios */
+.business-hours {
+  margin: var(--spacing-md) 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+.business-hours strong {
+  color: var(--text-white);
+}
+
+/* Badges de confianza */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-badge {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,77 @@
+/* Navbar general */
+.navbar__content {
+  background: var(--primary-900);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  flex-direction: column; /* divide en 2 filas */
+  gap: var(--spacing-sm);
+}
+
+/* Parte superior */
+.navbar__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Parte inferior */
+.navbar__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--primary-500);
+}
+
+/* Logo */
+.logo__AgroMarket img {
+  height: var(--size-logo);
+  width: 300px;
+}
+
+/* Barra de búsqueda */
+.search__bar {
+  display: flex;
+  flex: 1;
+  max-width: 400px;
+  margin-right: var(--spacing-md);
+}
+
+.search__bar input {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  outline: none;
+  border-radius: var(--spacing-sm) 0 0 var(--spacing-md);
+  flex: 1;
+}
+
+.search__bar button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--terciario-600);
+  border: none;
+  border-radius: 0 var(--spacing-md) var(--spacing-md) 0;
+  cursor: pointer;
+}
+
+/* Iconos */
+.icons {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.icons a {
+  color: var(--white);
+  font-size: var(--size-icon-logo);
+  text-decoration: none;
+}
+
+/* Enlaces */
+.nav__links {
+  display: flex;
+  gap: var(--font-size-nav);
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}

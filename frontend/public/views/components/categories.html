@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías - AgroMarket</title>
+  <link rel="stylesheet" href="/frontend/public/css/components/categories.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar__content">
+    <div class="navbar__top">
+      <div class="search__bar">
+        <input type="text" placeholder="¿Qué quieres comprar?">
+        <button>🔍</button>
+      </div>
+      <div class="icons">
+        <a href="#"><i class="icon-user">👤</i></a>
+        <a href="#"><i class="icon-cart">🛒</i></a>
+      </div>
+    </div>
+
+    <div class="navbar__bottom">
+      <div class="logo__AgroMarket">
+        <img src="/frontend/public/img/logo_AgroMarket.png" alt="Logo AgroMarket">
+      </div>
+      <ul class="nav__links">
+        <li><a href="/frontend/public/views/index.html">Inicio</a></li>
+        <li><a href="#">Donación</a></li>
+        <li><a href="#">Soles</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Marcas</a></li>
+        <li><a href="contact.html">Servicio al cliente</a></li>
+        <li><a href="#">Suscripciones</a></li>
+        <li><a href="#">🔥Ofertas🔥</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sección de categorías -->
+  <main class="categories">
+    <h1>Nuestras Categorías</h1>
+    <div class="categories__grid">
+      <div class="category" data-category="frutas">
+        <img src="/frontend/public/img/fruta.jpg" alt="Frutas">
+        <h2>Frutas</h2>
+      </div>
+      <div class="category" data-category="verduras">
+        <img src="/frontend/public/img/verduras.jpg" alt="Verduras">
+        <h2>Verduras</h2>
+      </div>
+      <div class="category" data-category="granos">
+        <img src="/frontend/public/img/grano.avif" alt="Granos">
+        <h2>Granos</h2>
+      </div>
+      <div class="category" data-category="lacteos">
+        <img src="/frontend/public/img/productos-lacteos.jpg" alt="Lácteos">
+        <h2>Lácteos</h2>
+      </div>
+      <div class="category" data-category="bebidas">
+        <img src="../img/cat-bebidas.jpg" alt="Bebidas">
+        <h2>Bebidas</h2>
+      </div>
+      <div class="category" data-category="semillas">
+        <img src="/frontend/public/img/semillas.jpg" alt="Semillas">
+        <h2>Semillas</h2>
+      </div>
+    </div>
+  </main>
+
+  <script src="/frontend/public/js/components/categories.js"></script>
+</body>
+</html>

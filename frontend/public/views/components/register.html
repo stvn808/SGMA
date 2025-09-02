@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="/frontend/public/css/components/style-register.css">
+    <link rel="stylesheet" href="/frontend/public/css/variables.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Enlace para volver a la página de inicio de sesión con flecha -->
+        <a href="/frontend/public/views/components/login.html" class="back-to-login">
+            ← Volver al inicio de sesión
+        </a>
+
+        <h1>Crear cuenta</h1>
+        <form id="registerForm">
+            <input type="text" id="Nombre de usuario" placeholder="Nombre de usuario" required>
+            <input type="password" id="Contraseña" placeholder="Contraseña" required>
+            <button type="submit">Crear cuenta</button>
+            <div id="mensaje" class="mensaje"></div>
+        </form>
+    </div>
+
+    <script src="/frontend/public/js/components/script.js"></script>
+</body>
+</html>

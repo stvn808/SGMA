@@ -1,0 +1,112 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Candara", sans-serif;
+  background: #f4f9f4;
+  color: #333;
+}
+
+/* Navbar */
+.navbar__content {
+  background: #2e7d32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__top, .navbar__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.search__bar {
+  display: flex;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search__bar input {
+  border: none;
+  padding: 8px;
+  outline: none;
+}
+
+.search__bar button {
+  border: none;
+  background: #2e7d32;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.icons a {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo__AgroMarket img {
+  height: 50px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav__links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav__links li a:hover {
+  color: #ffeb3b;
+}
+
+/* Sección categorías */
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.categories h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2e7d32;
+}
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.category {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.category h2 {
+  margin: 15px 0;
+  color: #2e7d32;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}

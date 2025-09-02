@@ -1,5 +1,5 @@
 :root {
-  /*  Colores Primarios */
+  /* Colores Primarios */
   --primary-50: #EEFFF6;
   --primary-100: #D7FFEC;
   --primary-200: #B2FFDB;
@@ -11,164 +11,155 @@
   --primary-800: #4CAF50;
   --primary-900: #0A5D3A;
   --primary-950: #00341E;
-  #4CAF50
+  /* #4CAF50 */
 
-  /*  Colores Secundarios */
-  --secundary-50: #EEFFF6;
-  --secundary-100: #D7FFEC;
-  --secundary-200: #B2FFDB;
-  --secundary-300: #76FFC0;
-  --secundary-400: #33F59D;
-  --secundary-500: #09DE7D;
-  --secundary-600: #00C16A;
-  --secundary-700: #049152;
-  --secundary-800: #0A5D3A;
-  --secundary-900: #0A5D3A;
-  --secundary-950: #00341E;
+  /* Colores Secundarios */
+  --secundary-50: #f9f6ed;
+  --secundary-100: #f2e9cf;
+  --secundary-200: #e6d2a2;
+  --secundary-300: #d8b36c;
+  --secundary-400: #cb9844;
+  --secundary-500: #bb8437;
+  --secundary-600: #a1682d;
+  --secundary-700: #895129;
+  --secundary-800: #6d4026;
+  --secundary-900: #5d3626;
+  --secundary-950: #361c12;
 
   /* Colores Terciarios */
-  --terciario-50: #F1F9EC;
-  --terciario-100: #E4F4DB;
-  --terciario-200: #C2E6B0;
-  --terciario-300: #9CD581;
-  --terciario-400: #79C259;
-  --terciario-500: #5AA73B;
-  --terciario-600: #44852B;
-  --terciario-700: #366625;
-  --terciario-800: #2E5222;
-  --terciario-900: #294621;
-  --terciario-950: #12260D;
+  --terciario-50: #fff5c5;
+  --terciario-100: #fff5c5;
+  --terciario-200: #ffeb85;
+  --terciario-300: #ffda46;
+  --terciario-400: #ffc71b;
+  --terciario-500: #ffa500;
+  --terciario-600: #e27c00;
+  --terciario-700: #bb5502;
+  --terciario-800: #984208;
+  --terciario-900: #7c360b;
+  --terciario-950: #481a00;
 
+  /* Basic colors */
+  --white: #fff;
+  --black: #000;
+  --gray-950: #101010;
+  --gray-900: #262626;
+  --gray-800: #3B3B3B;
+  --gray-700: #515151;
+  --gray-600: #676767;
+  --gray-500: #7D7D7D;
+  --gray-400: #929292;
+  --gray-300: #A8A8A8;
+  --gray-200: #BEBEBE;
+  --gray-100: #D4D4D4;
+  --gray-50: #E9E9E9;
 
-    /* Basic color*/
-    --white: #fff;
-    --black: #000;
-    --gray-950: #101010;
-    --gray-900: #262626;
-    --gray-800: #3B3B3B;
-    --gray-700: #515151;
-    --gray-600: #676767;
-    --gray-500: #7D7D7D;
-    --gray-400: #929292;
-    --gray-300: #A8A8A8;
-    --gray-200: #BEBEBE;
-    --gray-100: #D4D4D4;
-    --gray-50: #E9E9E9;
-
-    /* Colores de borde */
+  /* Colores de borde */
   --border-color: #dddddd;
   --border-light: #eeeeee;
 
-    /* Bordes redondeados */
+  /* Bordes redondeados */
   --border-radius-sm: 3px;
   --border-radius-md: 5px;
   --border-radius-lg: 8px;
   --border-radius-xl: 10px;
 
-    /* Sombras */
+  /* Sombras */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
   --shadow-hover: 0 4px 12px rgba(46, 125, 50, 0.15);
 
-    /* Colores de texto */
+  /* Colores de texto */
   --text-color: #333333;
   --text-light: #666666;
   --text-white: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.8);
 
-    /* Colores de fondo */
+  /* Colores de fondo */
   --bg-color: #ffffff;
   --bg-light: #fafafa;
   --bg-dark: #f4f4f4;
   --bg-hero: linear-gradient(135deg, #e8f5e8, #f4f4f4);
 
-    /* Transiciones */
+  /* Transiciones */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 
-    /* Breakpoints para responsive */
+  /* Breakpoints para responsive */
   --bp-mobile: 480px;
   --bp-tablet: 768px;
   --bp-desktop: 1024px;
   --bp-wide: 1200px;
 
-    /* Z-index layers */
+  /* Z-index layers */
   --z-dropdown: 100;
   --z-sticky: 200;
   --z-fixed: 300;
   --z-modal: 1000;
   --z-tooltip: 1100;
 
-    /* Espaciado */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
+  /* Escala de espaciado general */
+  --spacing-xss: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
-    /Icons/
-    --size-icon-header: 20px;
-    --size-icon-card: 60px;
-    --size-icon-section: 80px;
-    --size-icon-logo: 30px;
-    --size-icon-button: 24px;
-    --size-logo: 97px;
+  --spacing-3xl: 64px;
 
-    /* Escala de espaciado general */
-    --spacing-xss: 4px;
-    --spacing-xs: 8px;
-    --spacing-sm: 12px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2x1: 48px;
-    --spacing-3x1: 64px;
+  /* Espaciado específico de componentes */
+  --button-padding-y: 16px;
+  --button-padding-x: 10px;
+  --section-padding-y: 100px;
+  --spacing-card-padding-y: 25px;
+  --spacing-card-padding-x: 30px;
 
-    /* Espaciado específico de componentes */
-    --button-padding-y: 16px; /* Padding vertical para botones */
-    --button-padding-x: 10px; /* Padding horizontal para botones */
-    --section-padding-y: 100px; /* Padding vertical para secciones */
-    --spacing-card-padding-y: 25px; /* Padding vertical para tarjetas */
-    --spacing-card-padding-x: 30px; /* Padding horizontal para tarjetas */
+  /* Icons */
+  --size-icon-header: 20px;
+  --size-icon-card: 60px;
+  --size-icon-section: 80px;
+  --size-icon-logo: 30px;
+  --size-icon-button: 24px;
+  --size-logo: 97px;
 
-    /* Fuentes base */
-    --font-family-base: 'Poppins', sans-serif; 
+  /* Fuentes base */
+  --font-family-base: 'Poppins', sans-serif; 
 
-    /* Tamaños de fuente generales */
-    --font-size-hero-title: 48px;
-    --font-size-subtitle: 24px;
-    --font-size-body: 16px;
-    --font-size-nav: 14px; 
-    --font-size-button: 14px;
-    --font-size-footer: 12px;
+  /* Tamaños de fuente generales */
+  --font-size-hero-title: 48px;
+  --font-size-subtitle: 24px;
+  --font-size-body: 16px;
+  --font-size-nav: 14px; 
+  --font-size-button: 14px;
+  --font-size-footer: 12px;
 
-    /* Tamaños de fuente para elementos HTML específicos o propósito */
-    --font-size-h1: 60px;
-    --font-size-h2: 36px;
-    --font-size-h4: 20px;
-    --font-size-h5: 14px; 
-    --font-size-p-welcome: 18px; 
-    --font-size-parrafo: 15px; 
+  /* Tamaños de fuente específicos */
+  --font-size-h1: 60px;
+  --font-size-h2: 36px;
+  --font-size-h4: 20px;
+  --font-size-h5: 14px; 
+  --font-size-p-welcome: 18px; 
+  --font-size-parrafo: 15px; 
 
-    /* Tamaños de fuente para elementos específicos de "shopping" */
-    --font-size-h1-shopping-products: 22px; /* Renombré de 'h1 shopping products' */
-    --font-size-discount-shopping: 16px; /* Renombré de 'descount_shopping' */
-    --font-size-discount-green: 18px;
-    --font-size-price-shopping-product: 36px; 
+  /* Tamaños para shopping */
+  --font-size-h1-shopping-products: 22px;
+  --font-size-discount-shopping: 16px;
+  --font-size-discount-green: 18px;
+  --font-size-price-shopping-product: 36px; 
 
-    /* Pesos de fuente */
-    --font-weight-bold: 700;
-    --font-weight-medium: 500; /* Coincide con 'font-sive-nav' si era un peso de fuente */
-    --font-weight-regular: 400;
+  /* Pesos de fuente */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
 
-    /* Altura de línea y espaciado de letras */
-    --line-height-default: 1.5; /* Representa 150%, que es 1.5 en CSS (sin unidad) */
-    --letter-spacing-tight: -0.5px; /* Se asume 'px' para espaciado de letras */
+  /* Line height & letter spacing */
+  --line-height-default: 1.5;
+  --letter-spacing-tight: -0.5px;
 
-    /tipografía logo/
-    --font-family-logo-base: 'Century', serif; /* Assuming Century is the primary font, with a generic serif fallback */
-    --font-weight-logo-bold: 700;
-
+  /* Tipografía logo */
+  --font-family-logo-base: 'Century', serif;
+  --font-weight-logo-bold: 700;
 }

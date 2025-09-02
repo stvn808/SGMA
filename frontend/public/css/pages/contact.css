@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Candara', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background:var(--primary-600);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+}
+
+.navbar .logo img {
+  height: 70px;
+  width: 100px;
+}
+
+.navbar-right a {
+  color: var(--white);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.navbar-right a.active {
+  text-decoration: underline;
+}
+
+/* Contenedor del formulario */
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+  margin-bottom: 10px;
+  color: var(primary-500);
+  text-align: center;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--gray-200);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-500);
+  color: var(--white);
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: var(--primary-800);
+}
+
+.form-msg {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}

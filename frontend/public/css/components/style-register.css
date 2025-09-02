@@ -1,0 +1,127 @@
+/* Estilos específicos para a página de login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Candara', 'Candara';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold; /* Define todas as fontes da página como negrito */
+    overflow: hidden;  /* Impede a barra de rolagem */
+    background-image:url(/frontend/public/img/agro.jpeg) ;
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* Animacion de fondo */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Estilo del formulário */
+.login-container {
+    background-color: var(--gray-900);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 300px; /* Largo del contenedor */
+}
+
+/* Título */
+h1 {
+    color: var(--primary-600);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold; /* Título en negrita */
+}
+
+/* Inputs del formulário */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-500);
+    background-color: var(--gray-800);
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+/* Boton de envio */
+button {
+    width: 70%; /* Asegura  que el boton ocupe el 100% del espacio disponible */
+    padding: 10px;
+    background-color: var(--primary-600);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold; /* Boton el negrita */
+}
+
+button:hover {
+    background-color: var(--primary-800);
+}
+
+/* Mensaje de error y  exito */
+.message {
+    margin-top: 10px;
+    color: var(--secundary-500);
+    font-size: 0.9rem;
+    font-weight: bold; /* Mensaje en negrita */
+}
+
+/*Animación de transición para empujar la página hacia un lado. */
+.fade-out {
+    animation: pushOut s forwards;
+}
+
+@keyframes pushOut {
+    0% {
+        transform: translateX(0); /* Comienza en estado normal*/
+        opacity: 1; /*Comienza visible */
+    }
+    50% {
+        transform: translateX(100vw); /* Mover la página hacia la derecha (fuera de la pantalla) */
+        opacity: 0.5; /*Disminuye la opacidad */
+    }
+    100% {
+        transform: translateX(100vw); /*Página completamente fuera de la pantalla. */
+        opacity: 0; /* Se vuelve invisible */
+    }
+}
+
+/* Cambiar el color de los mensajes a blanco y negrita*/
+.success, .error {
+    color: var(--white) !important;  /*Color blanco para mensajes. */
+    font-weight: bold;  /* Hacer mensajes en negrita */
+}
+
+/* Estilo para el enlace a la página de inicio de sesión */
+.back-to-login {
+    color: var(--primary-500); /* Color de flecha */
+    font-size: 1rem; /*Tamaño de fuente */
+    font-weight: bold; /* Hazlo atrevido */
+    text-decoration: none; /* Quitar el subrayado */
+    margin-bottom: 10px; /*Espaciado debajo */
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+    text-align: center; /* Centrar el enlace */
+}
+
+.back-to-login:hover {
+    color: var(--primary-800); /* Color al pasar el mouse */
+}

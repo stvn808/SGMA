@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - AgroMarket</title>
+  <link rel="stylesheet" href="/frontend/public/css/pages/contact.css">
+  <link rel="stylesheet" href="/frontend/public/css/variables.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="/frontend/public/img/logo_AgroMarket.png" alt="AgroMarket">
+    </div>
+    <div class="navbar-right">
+      <a href="index.html">Inicio</a>
+      <a href="products.html">Productos</a>
+      <a href="categories.html">Categorías</a>
+      <a href="contact.html" class="active">Contacto</a>
+    </div>
+  </header>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <main class="contact-container">
+    <h2>Contáctanos</h2>
+    <p>Completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" placeholder="Escribe tu nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@email.com">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Asunto</label>
+        <input type="text" id="subject" placeholder="Escribe el asunto">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Mensaje</button>
+      <p id="formMsg" class="form-msg"></p>
+    </form>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 AgroMarket - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="/frontend/public/js/pages/contact.js"></script>
+</body>
+</html>

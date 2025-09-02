@@ -1,0 +1,137 @@
+/* Estilos específicos para a página de login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Candara', sans-serif; /* fuente para todos los elemetos*/
+}
+
+body {
+    font-family: 'Candara', sans-serif; /* Aplica la fuente al cuerpo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold; /* establece todas las fuentes en negrita */
+    overflow: hidden;  /* evita el desplacamiento */
+    background-image:url(/frontend/public/img/02MISCELANE.jpg);
+    background-size: 150% 150%;
+    animation: gradientMove 15s ease infinite;
+}
+
+/* Animacion de imagen */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    background-color:var(--gray-900);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 300px;
+    max-width: 100%;
+}
+
+h1 {
+    color: var(--primary-600); /* Color para el título */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-500);
+    background-color: var(--gray-800);
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+button {
+    width: 70%;
+    padding: 10px;
+    background-color: var(--primary-600);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--primary-800);
+}
+
+p a {
+    color: var(--primary-500); /* Color para el enlace de crear cuenta" */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold; /* poner el texto crear cuenta en negrita */
+}
+
+p {
+    margin-top: 10px; /* Aumenta el espacio entre iniciar sesion y crear cuenta" */
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.message.show {
+    display: block;
+    opacity: 1;
+}
+
+.success {
+    background-color: var(--secundary-500);
+    color: var(--white);
+}
+
+.error {
+    background-color:var(--terciario-700);
+    color: var(--white);
+}
+
+/* Estilo para la frase No tiene una cuenta? */
+p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+p a {
+    color: var(--primary-600); /* color para Crear cuenta */
+    font-weight: bold;
+}
+
+.back-to-login {
+    color: var(--primary-500); /* Color de flecha */
+    font-size: 1rem; /*Tamaño de fuente */
+    font-weight: bold; /* Hazlo atrevido */
+    text-decoration: none; /* Quitar el subrayado */
+    margin-bottom: 10px; /*Espaciado debajo */
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+    text-align: center; /* Centrar el enlace */
+}
